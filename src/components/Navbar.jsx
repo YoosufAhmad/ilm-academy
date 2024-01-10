@@ -19,11 +19,11 @@ const Navbar = () => {
         <li className="p-4">Contact</li>
       </ul>
       <div onClick={handleNav} className="block md:hidden">
-        {!nav ? <CgClose size={30} /> : <IoIosMenu size={30} />}
+        {nav ? <CgClose size={30} /> : <IoIosMenu size={30} />}
       </div>
       <div
         className={
-          !nav
+          nav
             ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-400 bg-[#F4EAE6] ease-in-out duration-500"
             : "fixed left-[-100%]"
         }
@@ -43,3 +43,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
